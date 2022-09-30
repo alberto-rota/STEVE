@@ -1,8 +1,8 @@
 
 ![banner](Notes/readme/banner.jpg)
 ***
-# Virtual Fixtures in Robot-Assisted Minimally Invasive Surgery
-### *A study on their implementation, usability and effectiveness it the context of surgical robotics training*
+# S.T.E.V.E.
+### *Surgical Training Enhanced Virtual Environment*
 A surgical training simulator integrated with the *daVinci* surgical system, employing Active Constraints/Virtual Fixtures that provide a haptic force feedback during the surgical task under the **assistance-as-needed** paradigm.
 
 The project, conducted in the Medical Robotics section of [NearLab](https://nearlab.polimi.it/), is Alberto's Master thesis concluding the MSc in Biomedical Engineering at _Politecnico di Milano_.
