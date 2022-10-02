@@ -20,7 +20,7 @@ Training surgical skills is a complex and time-consuming process. *STEVE* implem
 * **Haptic Guidance** consists in providing a mechanical feedback force to the surgeon's hands and wrists, redirecting its motion towards targets or away from obstacles
 
 
-
+#### The haptic feedback rationale
 The trainee sits at the teleoperation console of a *daVinci* surgical robot and manipulates the MTMs
 
 His motion will be replicated inside of the virtual surgical environment on virtual PSMs
@@ -47,33 +47,10 @@ These have been built with the purpose of requiring the trainee to sollecitate 4
 * **Visual abstraction:** The capability of operating in areas where the surgical tool is not completely visible
 * **Hand-to-hand cooperation:** The capacity of resolving tasks with both manipulators and the prowess is handing objects from one manipulator to another
 
-# The Virtual Fixtures
-An in-depth analysis of the scientific literature combined with further development in the view of optimizing this specific case of surgical training yielded the implementation of 6 types of Virtual Fixtures apt to grant guidance for all surgical abilities (as above *wrist dexterity*, *steady hand*, *visual abstraction* and *hand-to-hand cooperation*) and that can be deployed in each of the surgical task of the simulator. 
-
-They have been formulated as follows:
-
-![vfs](Notes/readme/VFsDiagram.svg)
-
-
-* **Trajectory Guidance:** The feedback force will act in order to pull the tooltip towards a trajectory planned in the pre-op stage
-* **Insetion Guidance:** The feedback force will keep the tooltip inside a "cone of approach" that is directed towards a target. This cone is set up in pre-op
-* **Orientation Guidance**: A feedback torque will act in order to align the surgical tooltip in a specific orientation set up in pre-op
-* **Obstacle Avoidance**: The feedback force will act in order to keep the surgical tool away from undesired areas
-* **Surface Guidance:** Feedback force and torque are applied to keep the surgical instrument close to a surface (planar or non-planar) and with the same orientation as the surface itself
-* **Trajectory and Orientation Guidance**: A combination of *Trajectory Guidance* and *Orientation Guidance*
-
-# Preliminary Results
-A sample video of a volunteer user with little experience in surgical training **WITHOUT ASSISTANCE**
-
-![gif unassisted](Notes/readme/suturing_unassisted.gif)
-***
-The same subject performing the same task **WITH HAPTIC VIRTUAL FIXTURES APPLIED**
-
-![gif assisted](Notes/readme/suturing_assisted.gif)
-
-Following are the plots of the distance and angular errors (in *mm* and *degrees*, respectively) that the trainee issued while performing this suturing task. Position and orientation data are recorded in real time (30 frames per second) by the simulator and are saved as a `.csv` file ready for and extensive data analysis. 
-
-![disterror](Notes/readme/distanceerror.svg)
-![anglerror](Notes/readme/angleerror.svg)
-
-**Even though this is preliminary data and no direct or indirect conclusion can be gathered**, it is still qualitatively evident how in general both the distance and angular error in the task performed with assistance (blue line) are lower than in the unassisted case (orange line)
+# Future Work
+*STEVE* is an ongoing project, constantly enriched by optimizations and by new features. Possible work topics include:
+* **New tasks:** the simulator can be easily extended with new tasks, by adding new scenes and new training scenarios
+* **Improved GUI:** *STEVE* does not yet feature an appealing GUI, which will improve the navigation and the user experience
+* **Camera Control:** the camera is currently fixed in an optimal position for each training task. However, as a real teleoperated system allows to move the camera through the pedalboard, it would be interesting to implement this feature in the simulator as well
+* **Task Adaptivity:** Task difficulty should change according to the trainee's performace. The better the execution the harder should the task be, requiring more articulate wrist movements, better camera control, *etc*
+* **Progess Monitoring:** Provide a quantitative measure of the trainee's performance and save it in a database, so that the surgeon's progress can be monitored on a milti-day basis
