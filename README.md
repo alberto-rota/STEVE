@@ -2,54 +2,25 @@
 ![banner](Notes/readme/banner.jpg)
 ***
 # S.T.E.V.E.
-### *Surgical Training Enhanced Virtual Environment*
-A surgical training simulator integrated with the *daVinci* surgical system, employing Active Constraints/Virtual Fixtures that provide a haptic force feedback during the surgical task under the **assistance-as-needed** paradigm.
+## *Surgical Training Enhanced Virtual Environment*
+A surgical training simulator integrated with the *daVinci* surgical system, developed at the Medical Robotics section of [NearLab](https://nearlab.polimi.it/), in the [Department of Electronics, Information and Bioengineering](https://www.deib.polimi.it/ita/home) at _Politecnico di Milano_.
 
-The project, conducted in the Medical Robotics section of [NearLab](https://nearlab.polimi.it/), is Alberto's Master thesis concluding the MSc in Biomedical Engineering at _Politecnico di Milano_.
-
-* **Maintainer of the Project:** Alberto Rota
-* **Supervisor:** Prof. De Momi Elena
-* **Co-Supervisor:** Fan Ke
-
-Want to partecipate to the experimental phase of this project? Read this [webpage](USER_STUDY.md) and then [contact the researchers](mailto:alberto2.rota@mail.polimi.it)
-***
-_As the project is still undergoing development, this README is very synthetic and above all **INCOMPLETE**. Additional information and details are available by [contacting the author](mailto:alberto2.rota@mail.polimi.it)_
-
-
-_NOTE_: This repo currently only acts as a dev backup and a version control system for relevant files. **Downloading this repo will not download the simulator**, as larger files (blend, obj, packages, bin, ...) aren't stored here and will only be shared once the project is complete
+#### Project Maintainer: *Alberto Rota*
+#### Project Supervisor: *Prof. Elena De Momi, PhD*
 ***
 
-# The project 
-This work proposes a surgical simulator built in the Unity 3D environment where a virtual daVinci surgical robot is operated by a real teleoperation console. The user therefore sits at the console and manipulates the MTMs: looking at the oculars of the HRSV system, he/she will see the feed from two virtual cameras placed in the virtual 3D scene, acquiring depth perception as a consequence 
+*STEVE* is a simulated training environment for learning surgical robotic skills. It allows aspining robotic surgeons to develop key surgical skills in a safe and controlled environment, without the need for surgical phantoms or animal models. 
+
+*STEVE* communicates with the *daVinci* surgical system via the [dVRK](https://github.com/jhu-dvrk/sawIntuitiveResearchKit) package: a Unity application receives the motion commands from the MTMs of the teleoperation console and moves the joints of the virtual PSMs accordingly. Simulated surgical scenes and training scenarios feature several objects and tools, with which the surgeon can interact with.
 
 ![unity](Notes/readme/unity.png)
+### An Enhanced Training Experience
+Training surgical skills is a complex and time-consuming process. *STEVE* implements visuo-haptic assistance algorithms that provide guidance to the trainee during the execution of a task. 
+* **Visual Guidance** consists in the color-coding of the virtual instruments and object, which change hue depending on the correctness of the exectution
+* **Haptic Guidance** consists in providing a mechanical feedback force to the surgeon's hands and wrists, redirecting its motion towards targets or away from obstacles
 
 
-### Aim of the project
- The main goal of the work is to **implement and assess** the efficacy of **virtual fixtures**: from the relative position of the surgical tool tip and the one of objects, obstacles, trajectories or guides, a "guidance force" can be computed in such a way that its application to the surgical tooltip will improve the surgical performance. The **"Assistance-as-needed"** paradigm is the main factor that is taken into consideration when deciding weather or not (and how) to apply such force 
 
-As an example, this force will be computed so that it pushes the end-effector away from obstacles or, conversely, towards trajectories.
-
-#### Experimental Study
-An experimental study will assess the effectiveness, utility and clinical relevance of Virtual Fixtures. In this phase, a population of volunteer subjects will be divided in:
-* An **Assisted Group** (group **A**), where the haptic force feedback will be provided when performing surgical training tasks on the simulator
-* A **Control Group** (group **C**), to whom no force feedback will be delivered  
-
-The results of the study are anticipated as follows:
-1. Subjects in **A** will learn surgical skills more rapidly than subjects in **C**
-2. Subjects in **A** will reach an overall better performance than subjects in **C**, at the end of the study
-3. Subjects in **A** will better skill retention 
-4. Sbjects in **A** will show better skill transfer
-
-
-|                                   |    Control Group    |  Assisted Group      |
-|----------                         |:---:                |:------:              |
-| Beginning of the training         |Poor performance     |Poor performance      |
-| End of training                   |   Peak Performance  | Discrete Performance |
-| After a period of no training     |   Good Performance  | Mediocre Performance |
-| When presented with un-seen tasks |   Good Performance  | Poor Performance     |
-
-## Framework
 The trainee sits at the teleoperation console of a *daVinci* surgical robot and manipulates the MTMs
 
 His motion will be replicated inside of the virtual surgical environment on virtual PSMs
