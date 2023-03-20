@@ -1,5 +1,12 @@
 
-![banner](Notes/readme/banner.jpg)
+<p align="center"> 
+<a>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="Notes/readme/banner_light.png">
+  <img alt="NEARLab" src="Notes/readme/banner_dark.png"> 
+</picture>
+</a> </p>
+
 ***
 # S.T.E.V.E.
 ## *Surgical Training Enhanced Virtual Environment*
@@ -14,6 +21,7 @@ A surgical training simulator integrated with the *daVinci* surgical system, dev
 *STEVE* communicates with the *daVinci* surgical system via the [dVRK](https://github.com/jhu-dvrk/sawIntuitiveResearchKit) package: a Unity application receives the motion commands from the MTMs of the teleoperation console and moves the joints of the virtual PSMs accordingly. Simulated surgical scenes and training scenarios feature several objects and tools, with which the surgeon can interact with.
 
 ![unity](Notes/readme/unity.png)
+
 ### An Enhanced Training Experience
 Training surgical skills is a complex and time-consuming process. *STEVE* implements visuo-haptic assistance algorithms that provide guidance to the trainee during the execution of a task. 
 * **Visual Guidance** consists in the color-coding of the virtual instruments and object, which change hue depending on the correctness of the exectution
@@ -32,6 +40,7 @@ The force computed in the Unity environment is then, frame by frame, applied to 
 The image below is a very synthetic block diagram of the negative feedback for the haptic force
 
 ![diagram](Notes/readme/diagram.png)
+![diagram](Notes/readme/assistance_gif.gif)
 
 
 # The Surgical Tasks
@@ -49,8 +58,18 @@ These have been built with the purpose of requiring the trainee to sollecitate 4
 
 # Future Work
 *STEVE* is an ongoing project, constantly enriched by optimizations and by new features. Possible work topics include:
+
+#### Generic Improvements
 * **New tasks:** the simulator can be easily extended with new tasks, by adding new scenes and new training scenarios
 * **Improved GUI:** *STEVE* does not yet feature an appealing GUI, which will improve the navigation and the user experience
-* **Camera Control:** the camera is currently fixed in an optimal position for each training task. However, as a real teleoperated system allows to move the camera through the pedalboard, it would be interesting to implement this feature in the simulator as well
 * **Task Adaptivity:** Task difficulty should change according to the trainee's performace. The better the execution the harder should the task be, requiring more articulate wrist movements, better camera control, *etc*
 * **Progess Monitoring:** Provide a quantitative measure of the trainee's performance and save it in a database, so that the surgeon's progress can be monitored on a milti-day basis
+
+#### Control Strategies
+* **Camera Control:** the camera is currently fixed in an optimal position for each training task. However, as a real teleoperated system allows to move the camera through the pedalboard, it would be interesting to implement this feature in the simulator as well
+* **Haptic Feedback:** Collisions detected by the simulated environment may be used to provide haptic feedback to the practitioner. This would allow to provide a more realistic experience, as the surgeon would feel the mechanical resistance of the virtual objects. The effect of the haptic feedback on the surgical performance should be evaluated with an experimental study
+* ****
+
+#### Artificial Intelligence
+* **Task Automatization:** Some surgical tasks (suturing, knotting, *etc*) can be automatized and executed optimally without the surgeon teleoperating the robot. A Reinforcement Learning algorithm could be used to train a policy that would allow the robot to autonomously perform such tasks
+* 
