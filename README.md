@@ -16,10 +16,10 @@ A surgical training simulator integrated with the *daVinci* surgical system, dev
 #### Project Supervisor: *Prof. Elena De Momi, PhD*
 ***
 If you are looking for installation and usage instructions, go to 
-<a href="https://github.com/alberto-rota/STEVE/wiki">this repo's Wiki</a>:   
+<a href="https://github.com/alberto-rota/STEVE/wiki/">this repo's Wiki</a>:   
 
 <p align="left"> 
-<a href="https://github.com/alberto-rota/STEVE/wiki">
+<a href="https://github.com/alberto-rota/STEVE/wiki/">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="Notes/readme/guide_button_white.png">
   <img style="vertical-align:middle" alt="NEARLab" src="Notes/readme/guide_button_dark.png" width="200" > 
