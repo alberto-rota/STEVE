@@ -40,7 +40,7 @@ The force computed in the Unity environment is then, frame by frame, applied to 
 The image below is a very synthetic block diagram of the negative feedback for the haptic force
 
 ![diagram](Notes/readme/diagram.png)
-![diagram](Notes/readme/assistance_gif.gif)
+<!-- ![diagram](Notes/readme/assistance_gif.gif) -->
 
 
 # The Surgical Tasks
@@ -72,4 +72,4 @@ These have been built with the purpose of requiring the trainee to sollecitate 4
 
 #### Artificial Intelligence
 * **Task Automatization:** Some surgical tasks (suturing, knotting, *etc*) can be automatized and executed optimally without the surgeon teleoperating the robot. A Reinforcement Learning algorithm could be used to train a policy that would allow the robot to autonomously perform such tasks
-* 
+* **Adaptive Training:** With machine leaning, the task difficulty and the target skills could be determined from the trainee's performance on a data-driven basis.
