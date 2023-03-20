@@ -15,7 +15,18 @@ A surgical training simulator integrated with the *daVinci* surgical system, dev
 #### Project Maintainer: *Alberto Rota*
 #### Project Supervisor: *Prof. Elena De Momi, PhD*
 ***
+If you are looking for installation and usage instructions, go to 
+<a href="https://github.com/NEARLab-MedicalRobotics/dVRK/wiki">this repo's Wiki</a>:   
 
+<p align="left"> 
+<a href="https://github.com/NEARLab-MedicalRobotics/dVRK/wiki">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="Notes/readme/guide_button_white.png">
+  <img style="vertical-align:middle" alt="NEARLab" src="Notes/readme/guide_button_dark.png" width="200" > 
+</picture>
+</a> </p>
+
+***
 *STEVE* is a simulated training environment for learning surgical robotic skills. It allows aspining robotic surgeons to develop key surgical skills in a safe and controlled environment, without the need for surgical phantoms or animal models. 
 
 *STEVE* communicates with the *daVinci* surgical system via the [dVRK](https://github.com/jhu-dvrk/sawIntuitiveResearchKit) package: a Unity application receives the motion commands from the MTMs of the teleoperation console and moves the joints of the virtual PSMs accordingly. Simulated surgical scenes and training scenarios feature several objects and tools, with which the surgeon can interact with.
