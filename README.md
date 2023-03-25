@@ -5,11 +5,19 @@
   <source media="(prefers-color-scheme: dark)" srcset="Notes/readme/banner_light.png">
   <img alt="NEARLab" src="Notes/readme/banner_dark.png"> 
 </picture>
-</a> </p>
+</p>
+</p> 
+<p align="center"> 
+<a>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="Notes/readme/logo_light.png">
+  <img alt="NEARLab" src="Notes/readme/logo_dark.png" width=> 
+</picture> 
+</a>
+</p>
 
-***
-# S.T.E.V.E.
-## *Surgical Training Enhanced Virtual Environment*
+<h2 align="center" >  Surgical Training Enhanced Virtual Environment </h2>
+
 A surgical training simulator integrated with the *daVinci* surgical system, developed at the Medical Robotics section of [NearLab](https://nearlab.polimi.it/), in the [Department of Electronics, Information and Bioengineering](https://www.deib.polimi.it/ita/home) at _Politecnico di Milano_.
 
 #### Project Maintainer: *Alberto Rota*
