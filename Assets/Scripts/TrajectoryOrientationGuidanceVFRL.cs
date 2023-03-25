@@ -30,6 +30,8 @@ public class TrajectoryOrientationGuidanceVFRL : MonoBehaviour
     public bool left = false;
 
     [Header("Viscous Virtual Fixture")]
+
+    
     [Range(0,100f)]
     public float viscousGain = 30;
     [Range(0,3f)]
