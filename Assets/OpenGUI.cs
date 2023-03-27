@@ -38,6 +38,7 @@ public class OpenGUI : MonoBehaviour
     void ActivateGUI(bool flag) {
         // if (flag) {
             GameObject.Find("/Text/CanvasBar/GUI").SetActive(flag);
+            GameObject.Find("/Text/CanvasBar/Cursor").SetActive(flag);
         // }
     }
 
@@ -83,6 +84,17 @@ public class OpenGUI : MonoBehaviour
             // Debug.Log(
             // dfb = Vector3.Distance(
             // );
+            GameObject.Find("/Text/CanvasBar/Cursor").transform.position = p1_screen;
+
+            dfb = Vector2.Distance(
+                new Vector2(GameObject.Find("/Text/CanvasBar/Cursor").GetComponent<RectTransform>().position.x, GameObject.Find("/Text/CanvasBar/Cursor").GetComponent<RectTransform>().position.y),
+                new Vector2(GameObject.Find("/Text/CanvasBar/GUI/Button_P2P").GetComponent<RectTransform>().position.x, GameObject.Find("/Text/CanvasBar/GUI/Button_P2P").GetComponent<RectTransform>().position.y)
+                );
+            if (dfb < 70) {
+                GameObject.Find("/Text/CanvasBar/GUI/Button_P2P").GetComponent<UnityEngine.UI.Image>().color = Color.red;
+            } else {
+                GameObject.Find("/Text/CanvasBar/GUI/Button_P2P").GetComponent<UnityEngine.UI.Image>().color = Color.cyan;
+            }
         }
     }
 }
